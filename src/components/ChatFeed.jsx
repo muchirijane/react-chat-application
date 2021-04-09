@@ -7,10 +7,10 @@ const ChatFeed =(props)=>{
 
   const chat = chats && chats[activeChat];
   const renderMessages = ()=>{
-    const keys = Object.ke(messages);
+    const keys = Object.keys(messages);
     console.log(keys);
     return keys.map((key, index) =>{
-      const message = messages(key);
+      const message = messages[key];
       const lastMessage = index === 0 ? null : keys[index - 1];
       const isMyMessage = userName === message.sender.username;
 
